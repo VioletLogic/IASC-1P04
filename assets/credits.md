@@ -19,5 +19,5 @@ Creative Commons
 Attribution (3.0)
 
 *************
-** Art
+** Effects
 *************
