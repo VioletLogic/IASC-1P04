@@ -1,5 +1,5 @@
 *************
-* Music
+** Music
 *************
 
 "Malenky Prospekt"
@@ -19,5 +19,5 @@ Creative Commons
 Attribution (3.0)
 
 *************
-* Art
+** Art
 *************
