@@ -5,3 +5,7 @@ Welcome to my website for my twine game
 ## Playtest
 
 Playtest my game [Here]
+
+## Prototype
+
+Playtest my prototype [Here](prototype/ShiftPrototype.html)
