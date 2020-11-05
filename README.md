@@ -4,7 +4,7 @@ Welcome to my website for my twine game
 
 ## Playtest
 
-Playtest my game [Here]
+Playtest my game [Here](playtest.playtest)
 
 ## Prototype
 
