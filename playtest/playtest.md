@@ -3,7 +3,7 @@
 
 ## Play the game
 
-Play the game prototype [here](../../prototype/ShiftPrototype.html)
+Play the game prototype [here](../prototype/ShiftPrototype.html)
 
 ## Complete the playtest survey
 
