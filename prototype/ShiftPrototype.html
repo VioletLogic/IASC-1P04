@@ -688,10 +688,9 @@ $(document).on(':passagestart', function (ev) {
 &lt;&lt;= $items[_item].name[$genre].toUpperFirst()&gt;&gt;: &lt;&lt;link &quot;inspect&quot;&gt;&gt;\
 &lt;&lt;set $monodisplay = $items[_item].description[$genre]&gt;&gt;&lt;&lt;goto &quot;monodisplay&quot;&gt;&gt;\
 &lt;&lt;/link&gt;&gt; &lt;&lt;link &quot;buy ($items[_item].price $curency[$genre])&quot;&gt;&gt;\
-&lt;&lt;if $money &gt;= $items[_item].price&gt;&gt;\
-&lt;&lt;set $money -= $items[_item].price&gt;&gt;\
+&lt;&lt;if $money &gt;= $items[_item].price&gt;&gt;&lt;&lt;set $money -= $items[_item].price&gt;&gt;\
 &lt;&lt;run $inventory.push(_item)&gt;&gt;\
-&lt;&lt;set $monodisplay = &#39;Bought &lt;span id =\&#39;&#39; + $items[_item].color + &#39;\&#39;&gt;&#39; + $items[_item].name[$genre] + &#39;&lt;/span&gt; for &#39; + &lt;span id=\&#39;gold\&#39;&gt; $items[_item].price + &#39; $curency[$genre]&lt;/span&gt;.\n &lt;&lt;return \&#39;Continue shopping\&#39;&gt;&gt;&#39;&gt;&gt; &gt;&gt;&lt;&lt;goto &quot;monodisplay&quot;&gt;&gt;\
+&lt;&lt;set $monodisplay = &#39;Bought &#39; + $items[_item].name[$genre] + &#39; for &#39; + $items[_item].price + &#39; $curency[$genre].\n &lt;&lt;return \&#39;Continue buying\&#39;&gt;&gt;&#39;&gt;&gt; &gt;&gt;&lt;&lt;goto &quot;monodisplay&quot;&gt;&gt;\
 &lt;&lt;else&gt;&gt;\
 &lt;&lt;monodisplay &quot;You don&#39;t have enough money for that.\n&lt;&lt;return &#39;Look at other items&#39;&gt;&gt;&quot;&gt;&gt;\
 &lt;&lt;/if&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/capture&gt;&gt;&lt;&lt;/widget&gt;&gt;\
@@ -732,9 +731,7 @@ Items:
 &lt;&lt;print $scenes[$scene][_i].text[$genre]&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
 &lt;&lt;/capture&gt;&gt;\
-&lt;&lt;/for&gt;&gt;\
-
-&lt;&lt;set $event.junkyard = true&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="StoryMenu" tags="" position="599,199" size="100,100">&lt;&lt;if passage() == &quot;scene&quot;&gt;&gt;&lt;&lt;link [[Inventory]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;/for&gt;&gt;\</tw-passagedata><tw-passagedata pid="7" name="StoryMenu" tags="" position="599,198" size="100,100">&lt;&lt;if passage() == &quot;scene&quot;&gt;&gt;&lt;&lt;link [[Inventory]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if passage() == &quot;scene&quot;&gt;&gt;&lt;&lt;if $inventory.includes(&quot;gizmo&quot;)&gt;&gt;&lt;&lt;link [[Gizmo]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="Gizmo" tags="" position="525,350" size="100,100">Shift genre:
 
 &lt;&lt;for _i = 0; _i &lt; $genres.length; _i++&gt;&gt;&lt;&lt;capture _i&gt;&gt;\
